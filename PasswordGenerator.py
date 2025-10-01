@@ -11,9 +11,10 @@ def generatePassword(length: int):
     digits    = list(string.digits)
     symbols   = list(string.punctuation)
 
+    all = lowercase + uppercase + digits + symbols
     for x in range(length):
-        index = random.randint(0, len(uppercase)-1)
-        pwsd += uppercase[index]
+        index = random.randint(0, len(all)-1)
+        pwsd += all[index]
     
     print(f"Heres your new password: {pwsd}")
 
